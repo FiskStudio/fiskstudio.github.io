@@ -1,97 +1,279 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fisk Studio - Mobile Games & Apps</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #1e293b, #0f172a); padding: 50px 20px; text-align: center; border-bottom: 1px solid #334155; position: relative; }
-        .lang-switch { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; }
-        .lang-btn { background: #1e293b; color: #94a3b8; border: 1px solid #334155; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: 0.2s; }
-        .lang-btn.active, .lang-btn:hover { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
-        h1 { margin: 0; font-size: 2.8rem; color: #38bdf8; letter-spacing: 1px; }
-        p.subtitle { font-size: 1.15rem; color: #94a3b8; margin-top: 10px; }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .card { background: #1e293b; padding: 25px; border-radius: 12px; margin-bottom: 25px; border: 1px solid #334155; }
-        h2 { color: #38bdf8; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 10px; font-size: 1.4rem; }
-        footer { text-align: center; padding: 30px 20px; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; margin-top: 60px; }
-        a { color: #38bdf8; text-decoration: none; }
-        .hidden { display: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fisk Studio · Privacy Policy & Gizlilik Politikası</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --border: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header {
+      background: rgba(30, 41, 59, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #0f172a;
+    }
+    .brand-text b {
+      display: block;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .brand-text small {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 0.92rem;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+    main {
+      max-width: 820px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .lang-bar {
+      display: inline-flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      background: var(--surface);
+      padding: 6px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .lang-bar a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .lang-bar a:hover {
+      background: var(--accent);
+      color: #0f172a;
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 30px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #fff;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+    }
+    h2 {
+      font-size: 1.18rem;
+      color: var(--accent);
+      margin-top: 26px;
+      margin-bottom: 8px;
+    }
+    p, ul {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #e2e8f0;
+      font-size: 0.96rem;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="lang-switch">
-        <button id="btn-tr" class="lang-btn active" onclick="setLang('tr')">TR</button>
-        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">F</div>
+        <div class="brand-text">
+          <b>Fisk Studio</b>
+          <small>Privacy Policy · Gizlilik Politikası</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#en">English</a>
+        <a href="#tr">Türkçe</a>
+        <a href="#contact">Support</a>
+      </nav>
     </div>
-    <h1>Fisk Studio</h1>
-    <p class="subtitle lang-tr">Bağımsız Mobil Oyun ve Uygulama Geliştirme Stüdyosu</p>
-    <p class="subtitle lang-en hidden">Independent Mobile Game & Application Development Studio</p>
-</header>
+  </header>
 
-<div class="container">
-    <!-- TÜRKÇE İÇERİK -->
-    <div id="content-tr">
-        <div class="card">
-            <h2>Hakkımızda</h2>
-            <p><strong>Fisk Studio</strong>'ya hoş geldiniz. Android ve iOS platformları için eğlenceli oynanışa ve sade kullanıcı deneyimine odaklanan, fizik tabanlı mobil oyunlar ve pratik uygulamalar tasarlayıp geliştiriyoruz.</p>
-        </div>
-
-        <div class="card">
-            <h2>Gizlilik Politikası</h2>
-            <p>Fisk Studio gizliliğinize saygı duyar. Uygulamalarımız ve oyunlarımız kişisel kimlik bilgilerinizi bilginiz dışında toplamaz, saklamaz veya paylaşmaz. Üçüncü taraf hizmetler (Google Play Hizmetleri veya AdMob gibi), kendi gizlilik politikaları doğrultusunda hizmet kalitesini artırmak ve uygun reklamları göstermek amacıyla anonim kullanım verileri toplayabilir.</p>
-        </div>
-
-        <div class="card">
-            <h2>İletişim ve Yasal Bilgiler</h2>
-            <p><strong>Yasal Unvan / Geliştirici:</strong> Ömer Faruk AKTAŞ</p>
-            <p><strong>Konum:</strong> Maltepe, İstanbul, Türkiye (34854)</p>
-            <p><strong>E-posta:</strong> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
-        </div>
+  <main>
+    <div class="lang-bar">
+      <a href="#en">🇬🇧 English</a>
+      <a href="#tr">🇹🇷 Türkçe</a>
     </div>
 
-    <!-- İNGİLİZCE İÇERİK -->
-    <div id="content-en" class="hidden">
-        <div class="card">
-            <h2>About Us</h2>
-            <p>Welcome to <strong>Fisk Studio</strong>. We design and develop engaging, physics-based mobile games and utility applications for Android and iOS platforms, focusing on fun gameplay and clean user experiences.</p>
-        </div>
+    <!-- ENGLISH SECTION -->
+    <article id="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: 26 October 2026 · Applies to all mobile games and applications published by <b>Fisk Studio</b> (Omer Faruk AKTAS) on Google Play and the App Store.</p>
 
-        <div class="card">
-            <h2>Privacy Policy</h2>
-            <p>Fisk Studio respects your privacy. Our applications and games do not collect, store, or share any personal identifiable information unknowingly. Third-party services (such as Google Play Services or AdMob) may collect anonymous usage data to improve service quality and display relevant ads in accordance with their own privacy policies.</p>
-        </div>
+      <h2>1. The short version</h2>
+      <ul>
+        <li>Our games require <b>no mandatory user accounts</b>. We do not ask for your name, e-mail or password to play.</li>
+        <li>Your game progress is stored <b>locally on your device</b>. We do not upload your personal files to our servers.</li>
+        <li>Our games may show <b>optional rewarded or interstitial ads</b> (Google AdMob) and offer <b>optional in-app purchases</b> (Google Play / Apple App Store). These partners process some technical data as described below.</li>
+        <li>We may use <b>Firebase Analytics</b> (Google) to understand how our games are played in aggregate (for example level completion rates and app stability).</li>
+      </ul>
 
-        <div class="card">
-            <h2>Contact & Legal Information</h2>
-            <p><strong>Legal Entity / Owner:</strong> Omer Faruk AKTAS</p>
-            <p><strong>Location:</strong> Maltepe, Istanbul, Turkiye (34854)</p>
-            <p><strong>Email:</strong> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
-        </div>
-    </div>
-</div>
+      <h2>2. Data stored on your device</h2>
+      <p>Your in-game progress, scores, unlocked items, settings (language, sound, music, notifications) and purchase entitlements are saved in the application's local storage on your device. Deleting the app deletes this local data. We never have direct access to it.</p>
 
-<footer>
-    <span class="lang-tr">&copy; 2026 Fisk Studio - Ömer Faruk AKTAŞ. Tüm hakları saklıdır.</span>
-    <span class="lang-en hidden">&copy; 2026 Fisk Studio - Omer Faruk AKTAS. All rights reserved.</span>
-</footer>
+      <h2>3. Advertising (Google AdMob)</h2>
+      <p>To serve and measure advertisements, Google AdMob and its partners may process: the device's advertising identifier (AAID on Android / IDFA on iOS, only if permitted), IP address, approximate location derived from it, device model and OS version, app identifier, and ad interaction events. In the European Economic Area, the UK and Switzerland, a consent dialog (Google UMP) is shown before ads are loaded. If you decline tracking, you may still see non-personalised ads. Google's policies: <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">How Google uses data in ads</a>, <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a>.</p>
 
-<script>
-    function setLang(lang) {
-        const isTr = lang === 'tr';
-        document.getElementById('content-tr').classList.toggle('hidden', !isTr);
-        document.getElementById('content-en').classList.toggle('hidden', isTr);
-        
-        document.querySelectorAll('.lang-tr').forEach(el => el.classList.toggle('hidden', !isTr));
-        document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', isTr));
-        
-        document.getElementById('btn-tr').classList.toggle('active', isTr);
-        document.getElementById('btn-en').classList.toggle('active', !isTr);
-    }
-</script>
+      <h2>4. In-app purchases (Google Play &amp; Apple)</h2>
+      <p>All in-app purchases (such as virtual currency, starter packs, or ad-free options) are processed directly by Google Play or Apple through the App Store. We receive only an anonymous transaction/receipt confirmation to unlock the content; we never receive or store your credit card or payment details.</p>
+
+      <h2>5. Analytics (Firebase)</h2>
+      <p>Firebase Analytics collects anonymous usage events (app opened, level reached, purchase made, ad reward collected) together with device model, OS version, country derived from IP, and an app-instance identifier that is reset when you reinstall the app. We use this strictly to improve gameplay balance and fix bugs. Data is retained by Google in accordance with <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase privacy terms</a>.</p>
+
+      <h2>6. Notifications</h2>
+      <p>If you allow it, our games may schedule notifications on your device (for example when a daily reward is ready). You can turn notifications off at any time in the game's settings or in your device's system settings.</p>
+
+      <h2>7. Children</h2>
+      <p>Our games are intended for a general audience and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal data through third-party ad or analytics partners, please contact us so we can assist you in addressing it.</p>
+
+      <h2>8. Your rights</h2>
+      <p>Depending on where you live (GDPR, KVKK, CCPA and similar laws), you have the right to access, correct, delete or object to the processing of your personal data, and to withdraw consent. You can reset your advertising identifier or opt out of personalised ads at any time in your Android (Settings → Google → Ads) or iOS (Settings → Privacy &amp; Security → Tracking) settings. For any additional requests, please e-mail us.</p>
+
+      <h2>9. Security and international transfers</h2>
+      <p>Technical data processed by Google and Apple may be transferred to and stored in countries outside your own, including the United States, under those companies' legal safeguards (such as standard contractual clauses).</p>
+
+      <h2>10. Changes</h2>
+      <p>We may update this Privacy Policy when our games or legal requirements change. The date at the top of this page indicates the latest version.</p>
+
+      <h2>11. Contact &amp; Legal Entity</h2>
+      <p><b>Studio:</b> Fisk Studio<br>
+      <b>Legal Entity / Developer:</b> Omer Faruk AKTAS<br>
+      <b>Location:</b> Maltepe, Istanbul, Turkiye (34854)<br>
+      <b>E-mail:</b> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
+    </article>
+
+    <!-- TURKISH SECTION -->
+    <article id="tr">
+      <h1>Gizlilik Politikası</h1>
+      <p class="meta">Son güncelleme: 26 Ekim 2026 · <b>Fisk Studio</b> (Ömer Faruk AKTAŞ) tarafından Google Play ve App Store'da yayınlanan tüm mobil oyun ve uygulamalar için geçerlidir.</p>
+
+      <h2>1. Kısaca</h2>
+      <ul>
+        <li>Oyunlarımızda <b>zorunlu kullanıcı hesabı yoktur</b>. Oynamak için ad, e-posta ya da şifre istemeyiz.</li>
+        <li>Oyun ilerlemeniz <b>cihazınızda</b> saklanır; kişisel dosyalarınız sunucularımıza yüklenmez.</li>
+        <li>Oyunlarımızda <b>ödüllü veya geçiş reklamları</b> (Google AdMob) ve <b>isteğe bağlı uygulama içi satın almalar</b> (Google Play / Apple) bulunabilir. Bu iş ortakları aşağıda açıklanan bazı teknik verileri işler.</li>
+        <li>Oyunların genel olarak nasıl oynandığını anlamak ve hataları gidermek için <b>Firebase Analytics</b> (Google) kullanabiliriz.</li>
+      </ul>
+
+      <h2>2. Cihazınızda saklanan veriler</h2>
+      <p>Oyun içi ilerlemeniz, skorlarınız, açılan öğeler, ayarlarınız (dil, ses, müzik, bildirim) ve satın alma haklarınız uygulamanın telefonunuzdaki yerel deposunda tutulur. Uygulamayı silmek bu verileri siler. Bu verilere doğrudan erişimimiz yoktur.</p>
+
+      <h2>3. Reklamlar (Google AdMob)</h2>
+      <p>Reklamları sunmak ve ölçmek için Google AdMob ve iş ortakları şunları işleyebilir: cihazın reklam kimliği (Android'de AAID / iOS'ta IDFA), IP adresi ve ondan türetilen yaklaşık konum, cihaz modeli ve işletim sistemi sürümü, uygulama kimliği ve reklam etkileşimleri. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de reklam yüklenmeden önce bir izin penceresi (Google UMP) gösterilir. Takibi reddederseniz kişiselleştirilmemiş reklamlar gösterilir. Google politikaları: <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">Google reklamlarda verileri nasıl kullanır</a>, <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a>.</p>
+
+      <h2>4. Uygulama içi satın almalar (Google Play &amp; Apple)</h2>
+      <p>Oyun içi paketler ve reklamsız seçenek gibi tüm satın almalar doğrudan Google Play veya Apple App Store üzerinden işlenir. Biz yalnızca içeriği açmak için anonim bir işlem/makbuz onayı alırız; kart veya ödeme bilgileriniz bize hiçbir zaman ulaşmaz.</p>
+
+      <h2>5. Analitik (Firebase)</h2>
+      <p>Firebase Analytics; anonim kullanım olaylarını (uygulama açıldı, ulaşılan seviye, satın alma, reklam ödülü) cihaz modeli, işletim sistemi sürümü, IP'den türetilen ülke ve uygulama yeniden kurulunca sıfırlanan bir uygulama örneği kimliğiyle birlikte toplar. Bunu yalnızca oyunlarımızı iyileştirmek için kullanırız. <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase gizlilik bilgileri</a>.</p>
+
+      <h2>6. Bildirimler</h2>
+      <p>İzin verirseniz oyunlarımız cihazınızda bildirimler planlayabilir (örneğin günlük ödül hazır olduğunda). Bildirimleri oyun ayarlarından ya da telefonunuzun sistem ayarlarından istediğiniz zaman kapatabilirsiniz.</p>
+
+      <h2>7. Çocuklar</h2>
+      <p>Oyunlarımız genel kitleye yöneliktir ve 13 yaş altı çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun reklam ortakları üzerinden kişisel veri sağladığını düşünüyorsanız bize yazın, çözmenize yardımcı oluruz.</p>
+
+      <h2>8. Haklarınız</h2>
+      <p>Yaşadığınız yere göre (KVKK, GDPR, CCPA ve benzeri yasalar) kişisel verilerinize erişme, düzeltme, silme, işlemeye itiraz etme ve rızanızı geri çekme hakkına sahipsiniz. Reklam kimliğinizi sıfırlamak ve kişiselleştirilmiş reklam iznini geri çekmek için Android (Ayarlar → Google → Reklamlar) veya iOS (Ayarlar → Gizlilik ve Güvenlik → Takip) ayarlarını kullanabilirsiniz. Diğer tüm talepleriniz için bize e-posta gönderebilirsiniz.</p>
+
+      <h2>9. Güvenlik ve yurt dışına aktarım</h2>
+      <p>Google ve Apple tarafından işlenen teknik veriler, bu şirketlerin yasal güvenceleri (örneğin AB standart sözleşme maddeleri) kapsamında ülkeniz dışındaki ülkelere aktarılabilir ve orada saklanabilir.</p>
+
+      <h2>10. Değişiklikler</h2>
+      <p>Oyunlarımız veya yasal gereksinimler değiştikçe bu politikayı güncelleyebiliriz. Üstteki tarih her zaman güncel sürümü gösterir.</p>
+
+      <h2 id="contact">11. İletişim ve Yasal Bilgiler</h2>
+      <p><b>Stüdyo:</b> Fisk Studio<br>
+      <b>Yasal Unvan / Geliştirici:</b> Ömer Faruk AKTAŞ<br>
+      <b>Konum:</b> Maltepe, İstanbul, Türkiye (34854)<br>
+      <b>E-posta:</b> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <a href="#en">English</a> · <a href="#tr">Türkçe</a> · <a href="mailto:f.omeraktas@outlook.com">Support</a><br><br>
+    © 2026 Fisk Studio · Omer Faruk AKTAS · <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a>
+  </footer>
 
 </body>
 </html>
