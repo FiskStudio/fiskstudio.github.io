@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisk Studio - Mobile Games & Apps</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #1e293b, #0f172a); padding: 50px 20px; text-align: center; border-bottom: 1px solid #334155; position: relative; }
+        .lang-switch { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; }
+        .lang-btn { background: #1e293b; color: #94a3b8; border: 1px solid #334155; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: 0.2s; }
+        .lang-btn.active, .lang-btn:hover { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+        h1 { margin: 0; font-size: 2.8rem; color: #38bdf8; letter-spacing: 1px; }
+        p.subtitle { font-size: 1.15rem; color: #94a3b8; margin-top: 10px; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .card { background: #1e293b; padding: 25px; border-radius: 12px; margin-bottom: 25px; border: 1px solid #334155; }
+        h2 { color: #38bdf8; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 10px; font-size: 1.4rem; }
+        footer { text-align: center; padding: 30px 20px; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; margin-top: 60px; }
+        a { color: #38bdf8; text-decoration: none; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="lang-switch">
+        <button id="btn-tr" class="lang-btn active" onclick="setLang('tr')">TR</button>
+        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <h1>Fisk Studio</h1>
+    <p class="subtitle lang-tr">Bağımsız Mobil Oyun ve Uygulama Geliştirme Stüdyosu</p>
+    <p class="subtitle lang-en hidden">Independent Mobile Game & Application Development Studio</p>
+</header>
+
+<div class="container">
+    <!-- TÜRKÇE İÇERİK -->
+    <div id="content-tr">
+        <div class="card">
+            <h2>Hakkımızda</h2>
+            <p><strong>Fisk Studio</strong>'ya hoş geldiniz. Android ve iOS platformları için eğlenceli oynanışa ve sade kullanıcı deneyimine odaklanan, fizik tabanlı mobil oyunlar ve pratik uygulamalar tasarlayıp geliştiriyoruz.</p>
+        </div>
+
+        <div class="card">
+            <h2>Gizlilik Politikası</h2>
+            <p>Fisk Studio gizliliğinize saygı duyar. Uygulamalarımız ve oyunlarımız kişisel kimlik bilgilerinizi bilginiz dışında toplamaz, saklamaz veya paylaşmaz. Üçüncü taraf hizmetler (Google Play Hizmetleri veya AdMob gibi), kendi gizlilik politikaları doğrultusunda hizmet kalitesini artırmak ve uygun reklamları göstermek amacıyla anonim kullanım verileri toplayabilir.</p>
+        </div>
+
+        <div class="card">
+            <h2>İletişim ve Yasal Bilgiler</h2>
+            <p><strong>Yasal Unvan / Geliştirici:</strong> Ömer Faruk AKTAŞ</p>
+            <p><strong>Konum:</strong> Maltepe, İstanbul, Türkiye (34854)</p>
+            <p><strong>E-posta:</strong> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
+        </div>
+    </div>
+
+    <!-- İNGİLİZCE İÇERİK -->
+    <div id="content-en" class="hidden">
+        <div class="card">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Fisk Studio</strong>. We design and develop engaging, physics-based mobile games and utility applications for Android and iOS platforms, focusing on fun gameplay and clean user experiences.</p>
+        </div>
+
+        <div class="card">
+            <h2>Privacy Policy</h2>
+            <p>Fisk Studio respects your privacy. Our applications and games do not collect, store, or share any personal identifiable information unknowingly. Third-party services (such as Google Play Services or AdMob) may collect anonymous usage data to improve service quality and display relevant ads in accordance with their own privacy policies.</p>
+        </div>
+
+        <div class="card">
+            <h2>Contact & Legal Information</h2>
+            <p><strong>Legal Entity / Owner:</strong> Omer Faruk AKTAS</p>
+            <p><strong>Location:</strong> Maltepe, Istanbul, Turkiye (34854)</p>
+            <p><strong>Email:</strong> <a href="mailto:f.omeraktas@outlook.com">f.omeraktas@outlook.com</a></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="lang-tr">&copy; 2026 Fisk Studio - Ömer Faruk AKTAŞ. Tüm hakları saklıdır.</span>
+    <span class="lang-en hidden">&copy; 2026 Fisk Studio - Omer Faruk AKTAS. All rights reserved.</span>
+</footer>
+
+<script>
+    function setLang(lang) {
+        const isTr = lang === 'tr';
+        document.getElementById('content-tr').classList.toggle('hidden', !isTr);
+        document.getElementById('content-en').classList.toggle('hidden', isTr);
+        
+        document.querySelectorAll('.lang-tr').forEach(el => el.classList.toggle('hidden', !isTr));
+        document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', isTr));
+        
+        document.getElementById('btn-tr').classList.toggle('active', isTr);
+        document.getElementById('btn-en').classList.toggle('active', !isTr);
+    }
+</script>
+
+</body>
+</html>
