@@ -1,0 +1,3 @@
+<!doctype html><meta charset="utf-8"><script>
+addEventListener('message',async e=>{if(e.origin!=='https://appstoreconnect.apple.com')return;const out=[];for(const [path,url] of e.data.jobs){try{const r=await fetch(path+'?z='+Date.now());const b=await r.blob();const p=await fetch(url,{method:'PUT',headers:{'Content-Type':'image/jpeg'},body:b});out.push(path+' '+b.size+' '+p.status)}catch(err){out.push(path+' err '+err.message)}}e.source.postMessage({done:out},e.origin)});
+</script>
