@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><script>
+addEventListener('message', async e => { if (!e.data || !e.data.get) return; const b = await fetch(e.data.get + '?' + Date.now()).then(r => r.arrayBuffer()); parent.postMessage({buf: b}, '*', [b]); });
+parent.postMessage({ready: 1}, '*');
+</script>
